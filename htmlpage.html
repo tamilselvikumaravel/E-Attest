@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Basic Search</title>	
+		<!--<script>
+		function loadXMLDoc()
+		{
+		var i=document.getElementById('btn');
+		if(i==document.getElementById('single'))
+		{
+		url:C:\Python27\single\new.py;
+		}
+		}
+		</script>-->
+    
+		<style>
+		
+			table{
+				
+				border: 1px solid black;
+				border-collapse: collapse;
+				height:100%;
+				width:100%;
+				background-color:#cce6ff; 
+				}
+				body{
+				background-color:#151B54;
+				}
+				#textboxid
+				{
+				height:50px;
+				align:center;
+				width:200px;
+				border-radius:15px;
+				
+				}
+				#text{
+				height:50px;
+				}
+				
+		</style>
+	</head>
+	<body></br><br/>
+	<h1><marquee><font color="white">E-SEARCH ENGINE</font></marquee></h1>
+		<table>
+				<form id="formget" action="{{url_for('dis')}}" method="POST">
+				
+				<div align='right'>
+					<br/>
+						<tr>
+							<!--<td><center>Enter url:</td>-->
+							<td><center><input id="textboxid1" type='text' placeholder='Seed Page' name="url" value="http://www.yahoo.com"></center><br/></td>
+						</tr>
+						<!--<tr>
+							<td><center>Enter max-pages:</td>
+							<td><center><input id="textboxid2" type='text' placeholder='max_pages' name="max_pages" value="2"></center><br/></td>
+						</tr>-->
+						<!--<tr>
+							<td><center>Enter Keyword to search:</center></td>
+							<td><center><input id="textboxid3" type='text' placeholder='keyword' name="keyword"></center><br/></td>
+						</tr>-->
+						<tr>
+							<td><center><input type="radio" id='single' name="search" value="basicsearch">Basic search<br></center></td>
+							<td><center><input type="radio" id='para' name="search" value="parallel">Parallel<br></center></td>
+							<td><center><input type="radio" id='had' name="search" value="hadoop">Hadoop<br></center></td>
+						</tr>
+						<tr>
+							<td><center><button type="submit" name="submit" id="btn" value="single">SEARCH</button></center></td>
+							
+						</tr>
+				</div>
+			
+			<div id="myDiv">
+						<tr>
+							<td><center>The crawled url's:</center></td>
+							<td><center><textarea rows="4" cols="50">{{crawled}}</textarea></center><br/></td>
+							<td><center>The Crawled Time:</center></td>
+							<td><center><input id="text" type='text' name='time' value='{{t1}}'></center></td>
+						</tr>
+						<br/>
+							<tr>
+								<td><center>The Length of Index:</center></td>
+								<td><center><input type='text' name='index len'value='{{length}}'></center><br/></td>
+								<td><center>The Rank Time:</center></td>
+								<td><center><input type='text' name='index len' value='{{rank_time}}'></center><br/></td>
+							</tr>
+							<!--<tr>
+								<td><center>The Rank is:</center></td>
+								<td><center><textarea rows="4" cols="50">{{ranks}}</textarea></center><br/></td>
+								<td><center>The Keyword is:</center></td>
+								<td><center><input type='text' type='keyword' value='{{key}}'></center></td>
+							</tr>-->
+							<!--<tr>
+								<td><center>The Graph is:</center></td>
+								<td><center><textarea rows="4" cols="50">{{graph}}</textarea></center><br/></td>
+								<td><center>The Graph Length is:</center></td>
+								<td><center><input type='text' type='keyword' value='{{graph_len}}'></center></td>
+							</tr>-->
+						<div>
+					</form>
+						
+								
+		</table>
+	</body>
+  </html>
